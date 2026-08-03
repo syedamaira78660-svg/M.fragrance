@@ -1,5 +1,5 @@
 (function () {
-  var WHATSAPP_NUMBER = '923342978354';
+  var WHATSAPP_NUMBER = '923186323130';
 
   // Build WhatsApp links from data-wa-text so the number lives in one place.
   document.querySelectorAll('[data-wa-text]').forEach(function (el) {

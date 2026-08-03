@@ -11,7 +11,7 @@ assets/
     white.png               - Aura D'Or bottle (already in place)
     blue.png                 - Noir Essence bottle (already in place)
     pink.png                 - Blush Serenity bottle (already in place)
-  gift-box.jpg              - Luxury gift box photo
+  gift-box.png              - Luxury gift box photo (already in place)
 ```
 
 Recommended: portrait product photos (~3:5 ratio works best with the current card crop), well-lit, at least 800px tall.
