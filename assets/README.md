@@ -7,11 +7,10 @@ assets/
   hero-banner.png           - hero banner image (already in place)
   logo.png                 - square logo mark (used in nav + favicon), transparent background recommended
   products/
-    red.jpg                - Red bottle (Versace Rose)
-    brown.jpg               - Brown bottle (Fog Paradise)
-    white.jpg               - White bottle (Janan Sports)
-    blue.jpg                 - Blue bottle (Figo Black)
-    pink.jpg                 - Pink bottle (Clear Day)
+    red.jpg                - Red Passion bottle
+    white.jpg               - Aura D'Or bottle
+    blue.jpg                 - Noir Essence bottle
+    pink.jpg                 - Blush Serenity bottle
   gift-box.jpg              - Luxury gift box photo
 ```
 

@@ -206,7 +206,7 @@ p { margin: 0; }
 /* ---------- Shelf / product cards ---------- */
 .shelf {
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   gap: 22px;
   position: relative;
   padding-bottom: 26px;
@@ -241,9 +241,7 @@ p { margin: 0; }
 .scent-cap { display: block; height: 6px; background: var(--accent); }
 .scent-body { padding: 20px; }
 .scent-name { font-size: 1.5rem; color: var(--cream); text-transform: uppercase; letter-spacing: 0.04em; }
-.scent-inspired { color: var(--muted); font-size: 0.88rem; margin-top: 6px; }
-.scent-inspired em { color: var(--gold-light); font-style: italic; }
-.scent-price { font-family: var(--font-display); font-size: 1.7rem; color: var(--gold-light); margin-top: 14px; }
+.scent-price { font-family: var(--font-display); font-size: 1.7rem; color: var(--gold-light); margin-top: 20px; }
 .scent-price span { font-size: 0.8rem; color: var(--muted); font-family: var(--font-body); letter-spacing: 0.05em; }
 
 /* ---------- Gift box ---------- */
@@ -335,9 +333,7 @@ p { margin: 0; }
   }
   .hero-inner { max-width: none; }
 
-  .shelf { grid-template-columns: repeat(3, 1fr); }
-  .shelf .scent-card:nth-child(even) { transform: translateY(0); }
-  .shelf .scent-card:nth-child(even):hover { transform: translateY(-6px); }
+  .shelf { grid-template-columns: repeat(2, 1fr); }
   .gift-inner, .story-inner { grid-template-columns: 1fr; }
   .gift-visual { max-width: 320px; }
 }
@@ -355,7 +351,6 @@ p { margin: 0; }
   .nav-toggle { display: flex; }
 
   .why-grid { grid-template-columns: 1fr; gap: 40px; }
-  .shelf { grid-template-columns: repeat(2, 1fr); }
   .section { padding: 76px 0; }
 }
 
