@@ -41,6 +41,8 @@
     });
     var wa = document.querySelector('.wa-float');
     if (wa) { wa.style.opacity = 1; wa.style.transform = 'none'; }
+    var heroBg = document.querySelector('.hero-bg');
+    if (heroBg) { heroBg.style.opacity = 1; }
   }
 
   if (!hasGSAP || prefersReducedMotion) {
@@ -53,7 +55,8 @@
   // Hero: a single orchestrated entrance on load. The bottled scent "unveils" itself
   // the way a print ad would: eyebrow, name, signature, tagline, then the call to action.
   gsap.timeline({ defaults: { ease: 'power3.out' } })
-    .fromTo('.hero-feather', { opacity: 0, scale: 0.92 }, { opacity: 0.14, scale: 1, duration: 1.8, ease: 'power2.out' }, 0)
+    .fromTo('.hero-bg', { opacity: 0 }, { opacity: 1, duration: 1.4, ease: 'power2.out' }, 0)
+    .fromTo('.hero-bg img', { scale: 1.12 }, { scale: 1, duration: 2.4, ease: 'power2.out' }, 0)
     .fromTo('.hero .eyebrow', { y: 16, opacity: 0 }, { y: 0, opacity: 1, duration: 0.6 }, 0.1)
     .fromTo('.hero-title', { y: 34, opacity: 0 }, { y: 0, opacity: 1, duration: 0.8 }, 0.22)
     .fromTo('.hero-title .script', { y: 14, opacity: 0, rotate: -8 }, { y: 0, opacity: 1, rotate: -2, duration: 0.7, ease: 'back.out(1.6)' }, 0.6)
@@ -63,9 +66,9 @@
     .fromTo('.hero-badge', { y: 14, opacity: 0 }, { y: 0, opacity: 1, duration: 0.6 }, 1.08)
     .to('.wa-float', { opacity: 1, scale: 1, duration: 0.6, ease: 'back.out(2)' }, 1.3);
 
-  // Subtle parallax on the ambient feather as the hero scrolls away.
-  gsap.to('.hero-feather', {
-    yPercent: 18,
+  // Subtle parallax on the background photo as the hero scrolls away.
+  gsap.to('.hero-bg img', {
+    yPercent: 10,
     ease: 'none',
     scrollTrigger: { trigger: '.hero', start: 'top top', end: 'bottom top', scrub: 0.6 }
   });

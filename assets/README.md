@@ -4,8 +4,8 @@ Drop real photos in here using these exact filenames and the site will pick them
 
 ```
 assets/
+  hero-banner.png           - hero banner image (already in place)
   logo.png                 - square logo mark (used in nav + favicon), transparent background recommended
-  hero.jpg                 - main hero photo (e.g. the flyer photo or a lifestyle shot), landscape, 1600x1200px+
   products/
     red.jpg                - Red bottle (Versace Rose)
     brown.jpg               - Brown bottle (Fog Paradise)
