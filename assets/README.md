@@ -7,11 +7,11 @@ assets/
   hero-banner.png           - hero banner image (already in place)
   logo.png                 - square logo mark (used in nav + favicon), transparent background recommended
   products/
-    red.jpg                - Red Passion bottle
-    white.jpg               - Aura D'Or bottle
-    blue.jpg                 - Noir Essence bottle
-    pink.jpg                 - Blush Serenity bottle
+    red.png                - Red Passion bottle (already in place)
+    white.png               - Aura D'Or bottle (already in place)
+    blue.png                 - Noir Essence bottle (already in place)
+    pink.png                 - Blush Serenity bottle (already in place)
   gift-box.jpg              - Luxury gift box photo
 ```
 
-Recommended: square or 4:5 portrait product photos, well-lit, plain/dark background, at least 800x800px.
+Recommended: portrait product photos (~3:5 ratio works best with the current card crop), well-lit, at least 800px tall.
