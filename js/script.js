@@ -36,13 +36,11 @@
 
   function showEverythingInstantly() {
     document.querySelectorAll('.reveal').forEach(function (el) { el.classList.add('in-view'); });
-    document.querySelectorAll('.rail-dot').forEach(function (el) {
+    document.querySelectorAll('.collection-tile').forEach(function (el) {
       el.style.opacity = 1; el.style.transform = 'none';
     });
     var wa = document.querySelector('.wa-float');
     if (wa) { wa.style.opacity = 1; wa.style.transform = 'none'; }
-    var heroBg = document.querySelector('.hero-bg');
-    if (heroBg) { heroBg.style.opacity = 1; }
   }
 
   if (!hasGSAP || prefersReducedMotion) {
@@ -55,20 +53,21 @@
   // Hero: a single orchestrated entrance on load. The bottled scent "unveils" itself
   // the way a print ad would: eyebrow, name, signature, tagline, then the call to action.
   gsap.timeline({ defaults: { ease: 'power3.out' } })
-    .fromTo('.hero-bg', { opacity: 0 }, { opacity: 1, duration: 1.4, ease: 'power2.out' }, 0)
-    .fromTo('.hero-bg img', { scale: 1.12 }, { scale: 1, duration: 2.4, ease: 'power2.out' }, 0)
+    .fromTo('.hero-bg', { opacity: 0 }, { opacity: 1, duration: 1.1, ease: 'power2.out' }, 0.1)
+    .fromTo('.hero-bg img', { scale: 1.12 }, { scale: 1, duration: 2.4, ease: 'power2.out' }, 0.1)
     .fromTo('.hero .eyebrow', { y: 16, opacity: 0 }, { y: 0, opacity: 1, duration: 0.6 }, 0.1)
     .fromTo('.hero-title', { y: 34, opacity: 0 }, { y: 0, opacity: 1, duration: 0.8 }, 0.22)
     .fromTo('.hero-title .script', { y: 14, opacity: 0, rotate: -8 }, { y: 0, opacity: 1, rotate: -2, duration: 0.7, ease: 'back.out(1.6)' }, 0.6)
     .fromTo('.hero-tagline', { y: 20, opacity: 0 }, { y: 0, opacity: 1, duration: 0.7 }, 0.75)
-    .fromTo('.hero-copy', { y: 20, opacity: 0 }, { y: 0, opacity: 1, duration: 0.7 }, 0.86)
+    .fromTo('.hero-copy-text', { y: 20, opacity: 0 }, { y: 0, opacity: 1, duration: 0.7 }, 0.86)
     .fromTo('.hero-actions', { y: 20, opacity: 0 }, { y: 0, opacity: 1, duration: 0.7 }, 0.96)
-    .fromTo('.hero-badge', { y: 14, opacity: 0 }, { y: 0, opacity: 1, duration: 0.6 }, 1.08)
+    .fromTo('.hero-pills', { y: 14, opacity: 0 }, { y: 0, opacity: 1, duration: 0.6 }, 1.06)
+    .fromTo('.hero-badge', { y: 14, opacity: 0 }, { y: 0, opacity: 1, duration: 0.6 }, 1.1)
     .to('.wa-float', { opacity: 1, scale: 1, duration: 0.6, ease: 'back.out(2)' }, 1.3);
 
-  // Subtle parallax on the background photo as the hero scrolls away.
+  // Subtle parallax on the hero photo as the page scrolls away.
   gsap.to('.hero-bg img', {
-    yPercent: 10,
+    yPercent: 8,
     ease: 'none',
     scrollTrigger: { trigger: '.hero', start: 'top top', end: 'bottom top', scrub: 0.6 }
   });
@@ -84,10 +83,11 @@
     }
   });
 
-  // Everything else that carries .reveal (outside the hero and outside the product
-  // cards) gets the standard fade-up, batched so neighbors stagger together.
+  // Everything else that carries .reveal (outside the hero, outside the product
+  // cards, and outside the collection tiles) gets the standard fade-up, batched so
+  // neighbors stagger together.
   var otherReveals = gsap.utils.toArray('.reveal').filter(function (el) {
-    return !el.closest('.hero') && !el.classList.contains('scent-card');
+    return !el.closest('.hero') && !el.classList.contains('scent-card') && !el.classList.contains('collection-tile');
   });
   ScrollTrigger.batch(otherReveals, {
     start: 'top 85%',
@@ -97,8 +97,8 @@
     }
   });
 
-  // Color rail dots pop in like little wax-seal stamps.
-  ScrollTrigger.batch('.rail-dot', {
+  // Collection tiles pop in like little wax-seal stamps.
+  ScrollTrigger.batch('.collection-tile', {
     start: 'top 90%',
     once: true,
     onEnter: function (batch) {

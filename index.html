@@ -10,7 +10,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Petit+Formal+Script&family=Jost:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/style.css">
-<noscript><style>.reveal,.rail-dot,.wa-float,.hero-bg{opacity:1!important;transform:none!important;}</style></noscript>
+<noscript><style>.reveal,.collection-tile,.wa-float{opacity:1!important;transform:none!important;}</style></noscript>
 </head>
 <body>
 
@@ -35,59 +35,87 @@
 
   <!-- HERO -->
   <section class="hero">
-    <div class="hero-bg" aria-hidden="true">
-      <img src="assets/hero-banner.png" alt="" onerror="this.parentElement.style.display='none'">
+    <div class="hero-bg">
+      <img src="assets/hero-banner.png" alt="M. Fragrance by Momal perfume bottle" onerror="this.parentElement.style.display='none'">
+      <div class="hero-bg-scrim"></div>
     </div>
-    <div class="hero-overlay" aria-hidden="true"></div>
 
-    <div class="wrap hero-inner">
-      <p class="eyebrow reveal">Now Introducing</p>
-      <h1 class="hero-title reveal">
-        M<span class="dot">.</span> Fragrance
-        <span class="script">by Momal</span>
-      </h1>
-      <p class="hero-tagline reveal">Luxury Scents, Affordable Elegance.</p>
-      <p class="hero-copy reveal">Four signature scents, each with its own personality — crafted to feel premium without the premium price tag.</p>
+    <div class="wrap hero-grid">
 
-      <div class="hero-actions reveal">
-        <a class="btn btn-primary" data-wa-text="Hi! I'm interested in M. Fragrance by Momal. Can you help me place an order?" href="#">
-          <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M17.6 6.32A8.86 8.86 0 0 0 3.06 16.9L2 21l4.2-1.1a8.86 8.86 0 0 0 4.24 1.08h.01a8.87 8.87 0 0 0 6.28-15.5zM10.46 19.4h-.01a7.36 7.36 0 0 1-3.76-1.03l-.27-.16-2.5.65.67-2.44-.18-.25a7.38 7.38 0 1 1 13.7-3.89 7.35 7.35 0 0 1-7.65 7.12zm4.04-5.53c-.22-.11-1.3-.64-1.5-.72-.2-.07-.35-.11-.5.11-.14.22-.57.72-.7.87-.13.14-.26.16-.48.05a6.1 6.1 0 0 1-3.02-2.64c-.23-.39.23-.36.65-1.2.07-.14.04-.27-.02-.38-.06-.11-.5-1.2-.68-1.65-.18-.43-.36-.37-.5-.38h-.43c-.14 0-.38.05-.58.27-.2.22-.76.74-.76 1.8s.78 2.09.89 2.23c.11.14 1.53 2.34 3.72 3.28.52.22.92.36 1.24.46.52.16 1 .14 1.37.09.42-.06 1.3-.53 1.48-1.05.18-.51.18-.95.13-1.04-.05-.1-.2-.16-.42-.27z"/></svg>
-          Order on WhatsApp
-        </a>
-        <a class="btn btn-ghost" href="#collection">View Collection</a>
+      <div class="hero-copy">
+        <p class="eyebrow reveal">Now Introducing</p>
+        <h1 class="hero-title reveal">
+          M<span class="dot">.</span> Fragrance
+          <span class="script">by Momal</span>
+        </h1>
+        <p class="hero-tagline reveal">Luxury Scents, Affordable Elegance.</p>
+        <p class="hero-copy-text reveal">Four signature scents, each with its own personality — crafted to feel premium without the premium price tag.</p>
+
+        <div class="hero-actions reveal">
+          <a class="btn btn-primary" data-wa-text="Hi! I'm interested in M. Fragrance by Momal. Can you help me place an order?" href="#">
+            <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M17.6 6.32A8.86 8.86 0 0 0 3.06 16.9L2 21l4.2-1.1a8.86 8.86 0 0 0 4.24 1.08h.01a8.87 8.87 0 0 0 6.28-15.5zM10.46 19.4h-.01a7.36 7.36 0 0 1-3.76-1.03l-.27-.16-2.5.65.67-2.44-.18-.25a7.38 7.38 0 1 1 13.7-3.89 7.35 7.35 0 0 1-7.65 7.12zm4.04-5.53c-.22-.11-1.3-.64-1.5-.72-.2-.07-.35-.11-.5.11-.14.22-.57.72-.7.87-.13.14-.26.16-.48.05a6.1 6.1 0 0 1-3.02-2.64c-.23-.39.23-.36.65-1.2.07-.14.04-.27-.02-.38-.06-.11-.5-1.2-.68-1.65-.18-.43-.36-.37-.5-.38h-.43c-.14 0-.38.05-.58.27-.2.22-.76.74-.76 1.8s.78 2.09.89 2.23c.11.14 1.53 2.34 3.72 3.28.52.22.92.36 1.24.46.52.16 1 .14 1.37.09.42-.06 1.3-.53 1.48-1.05.18-.51.18-.95.13-1.04-.05-.1-.2-.16-.42-.27z"/></svg>
+            Order on WhatsApp
+          </a>
+          <a class="btn btn-ghost" href="#collection">View Collection</a>
+        </div>
+
+        <nav class="hero-pills reveal" aria-label="Jump to scent">
+          <a class="pill" href="#scent-red">Red Passion</a>
+          <a class="pill" href="#scent-white">Aura D'Or</a>
+          <a class="pill" href="#scent-blue">Noir Essence</a>
+          <a class="pill" href="#scent-pink">Blush Serenity</a>
+        </nav>
       </div>
 
-      <div class="hero-badge reveal">
-        <span class="badge-ring" aria-hidden="true">
-          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l2.6 5.27 5.82.85-4.21 4.1 1 5.79L12 15.27l-5.21 2.74 1-5.79-4.21-4.1 5.82-.85z"/></svg>
-        </span>
-        Premium Quality &middot; Long Lasting Scents
-      </div>
+    </div>
+
+    <div class="hero-badge floating-card reveal">
+      <span class="badge-ring" aria-hidden="true">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l2.6 5.27 5.82.85-4.21 4.1 1 5.79L12 15.27l-5.21 2.74 1-5.79-4.21-4.1 5.82-.85z"/></svg>
+      </span>
+      <p>Premium Quality &middot; Long Lasting Scents</p>
     </div>
   </section>
 
   <!-- COLLECTION -->
   <section class="section" id="collection">
     <div class="wrap">
-      <p class="eyebrow reveal">Our Collection</p>
-      <h2 class="section-title reveal">Four Scents. One Signature.</h2>
-      <p class="section-intro reveal">Each bottle is color-coded to its mood — pick the one that's you, or collect them all.</p>
 
-      <nav class="color-rail" aria-label="Jump to scent">
-        <a href="#scent-red" class="rail-dot" style="--dot:#a11d2e" aria-label="Jump to Red Passion"></a>
-        <a href="#scent-white" class="rail-dot" style="--dot:#efe9d8" aria-label="Jump to Aura D'Or"></a>
-        <a href="#scent-blue" class="rail-dot" style="--dot:#16294f" aria-label="Jump to Noir Essence"></a>
-        <a href="#scent-pink" class="rail-dot" style="--dot:#c94f7c" aria-label="Jump to Blush Serenity"></a>
-      </nav>
+      <div class="collection-strip">
+        <div class="collection-strip-intro reveal">
+          <p class="eyebrow eyebrow-numbered"><span class="eyebrow-num">01</span> Our Collection</p>
+          <h2 class="section-title">Four Scents. One Signature.</h2>
+          <p class="section-intro">Each bottle is color-coded to its mood — pick the one that's you, or collect them all.</p>
+        </div>
+        <div class="collection-strip-tiles">
+          <a href="#scent-red" class="collection-tile reveal" style="--accent:#a11d2e">
+            <span class="collection-tile-media"><img src="assets/products/red.png" alt="" loading="lazy" onerror="this.style.display='none'"></span>
+            <span class="collection-tile-label">Red Passion</span>
+          </a>
+          <a href="#scent-white" class="collection-tile reveal" style="--accent:#efe9d8">
+            <span class="collection-tile-media"><img src="assets/products/white.png" alt="" loading="lazy" onerror="this.style.display='none'"></span>
+            <span class="collection-tile-label">Aura D'Or</span>
+          </a>
+          <a href="#scent-blue" class="collection-tile reveal" style="--accent:#16294f">
+            <span class="collection-tile-media"><img src="assets/products/blue.png" alt="" loading="lazy" onerror="this.style.display='none'"></span>
+            <span class="collection-tile-label">Noir Essence</span>
+          </a>
+          <a href="#scent-pink" class="collection-tile reveal" style="--accent:#c94f7c">
+            <span class="collection-tile-media"><img src="assets/products/pink.png" alt="" loading="lazy" onerror="this.style.display='none'"></span>
+            <span class="collection-tile-label">Blush Serenity</span>
+          </a>
+        </div>
+      </div>
 
       <div class="shelf">
 
-        <article class="scent-card reveal" id="scent-red" style="--accent:#a11d2e">
-          <div class="scent-visual">
+        <article class="scent-card editorial-card reveal" id="scent-red" style="--accent:#a11d2e">
+          <div class="scent-visual editorial-card-media">
             <img src="assets/products/red.png" alt="M. Fragrance Red Passion perfume bottle" loading="lazy" onerror="this.style.display='none'">
             <span class="scent-visual-fallback">M.</span>
+            <span class="editorial-card-overlay" aria-hidden="true"></span>
           </div>
-          <div class="scent-body">
+          <div class="scent-body editorial-card-copy">
             <span class="scent-cap" aria-hidden="true"></span>
             <h3 class="scent-name">Red Passion</h3>
             <p class="scent-price">1000 <span>PKR</span></p>
@@ -95,12 +123,13 @@
           </div>
         </article>
 
-        <article class="scent-card reveal" id="scent-white" style="--accent:#efe9d8">
-          <div class="scent-visual">
+        <article class="scent-card editorial-card reveal" id="scent-white" style="--accent:#efe9d8">
+          <div class="scent-visual editorial-card-media">
             <img src="assets/products/white.png" alt="M. Fragrance Aura D'Or perfume bottle" loading="lazy" onerror="this.style.display='none'">
             <span class="scent-visual-fallback dark">M.</span>
+            <span class="editorial-card-overlay" aria-hidden="true"></span>
           </div>
-          <div class="scent-body">
+          <div class="scent-body editorial-card-copy">
             <span class="scent-cap" aria-hidden="true"></span>
             <h3 class="scent-name">Aura D'Or</h3>
             <p class="scent-price">2000 <span>PKR</span></p>
@@ -108,12 +137,13 @@
           </div>
         </article>
 
-        <article class="scent-card reveal" id="scent-blue" style="--accent:#16294f">
-          <div class="scent-visual">
+        <article class="scent-card editorial-card reveal" id="scent-blue" style="--accent:#16294f">
+          <div class="scent-visual editorial-card-media">
             <img src="assets/products/blue.png" alt="M. Fragrance Noir Essence perfume bottle" loading="lazy" onerror="this.style.display='none'">
             <span class="scent-visual-fallback">M.</span>
+            <span class="editorial-card-overlay" aria-hidden="true"></span>
           </div>
-          <div class="scent-body">
+          <div class="scent-body editorial-card-copy">
             <span class="scent-cap" aria-hidden="true"></span>
             <h3 class="scent-name">Noir Essence</h3>
             <p class="scent-price">1000 <span>PKR</span></p>
@@ -121,12 +151,13 @@
           </div>
         </article>
 
-        <article class="scent-card reveal" id="scent-pink" style="--accent:#c94f7c">
-          <div class="scent-visual">
+        <article class="scent-card editorial-card reveal" id="scent-pink" style="--accent:#c94f7c">
+          <div class="scent-visual editorial-card-media">
             <img src="assets/products/pink.png" alt="M. Fragrance Blush Serenity perfume bottle" loading="lazy" onerror="this.style.display='none'">
             <span class="scent-visual-fallback">M.</span>
+            <span class="editorial-card-overlay" aria-hidden="true"></span>
           </div>
-          <div class="scent-body">
+          <div class="scent-body editorial-card-copy">
             <span class="scent-cap" aria-hidden="true"></span>
             <h3 class="scent-name">Blush Serenity</h3>
             <p class="scent-price">1000 <span>PKR</span></p>
@@ -166,30 +197,43 @@
         <p>M. Fragrance started with a simple belief: smelling incredible shouldn't come with a designer price tag. As a young entrepreneur launching her very first product, Momal spent months testing and refining four signature scents before she was happy enough to put her name on them.</p>
         <p>This perfume collection is just the beginning — candles and more are already in the works. For now, every bottle is packed, checked, and shipped by hand.</p>
       </div>
-      <blockquote class="pull-quote reveal">
+      <blockquote class="pull-quote floating-card reveal">
         <p>"I wanted everyone to feel confident in their own scent — without paying designer prices."</p>
         <cite>— Momal, Founder</cite>
       </blockquote>
     </div>
   </section>
 
-  <!-- WHY US -->
-  <section class="why-band">
-    <div class="wrap why-grid">
-      <div class="why-item reveal">
-        <svg class="why-icon" viewBox="0 0 40 40" aria-hidden="true"><path d="M20 4c6 8 12 15 12 22a12 12 0 0 1-24 0c0-7 6-14 12-22z" stroke="currentColor" stroke-width="1.3" fill="none"/></svg>
-        <h3>Premium Quality</h3>
-        <p>Long-lasting oils blended for scents that hold up all day.</p>
+  <!-- CRAFT / TRUST -->
+  <section class="craft-section">
+    <div class="wrap">
+      <div class="craft-grid">
+        <div class="craft-copy reveal">
+          <p class="eyebrow eyebrow-numbered"><span class="eyebrow-num">02</span> The Craft</p>
+          <h2 class="section-title">Ethically Blended, Honestly Priced</h2>
+          <p class="craft-intro">Every bottle is hand-checked and packed by Momal herself — no middlemen, no inflated designer markup, just scents made to be worn, not just admired.</p>
+          <a class="arrow-link" href="#story">Read Our Story <span class="arrow" aria-hidden="true">&rarr;</span></a>
+        </div>
+        <div class="craft-mark reveal" aria-hidden="true">
+          <span class="craft-monogram">M<span class="dot">.</span></span>
+        </div>
       </div>
-      <div class="why-item reveal">
-        <svg class="why-icon" viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="16" stroke="currentColor" stroke-width="1.3" fill="none"/><path d="M20 11v9l7 4" stroke="currentColor" stroke-width="1.3" fill="none" stroke-linecap="round"/></svg>
-        <h3>Long Lasting</h3>
-        <p>Built to stay with you from morning meetings to late nights.</p>
-      </div>
-      <div class="why-item reveal">
-        <svg class="why-icon" viewBox="0 0 40 40" aria-hidden="true"><path d="M6 20l14-14 14 14-14 14z" stroke="currentColor" stroke-width="1.3" fill="none"/><circle cx="20" cy="20" r="2.5" fill="currentColor"/></svg>
-        <h3>Affordable Elegance</h3>
-        <p>Designer-inspired notes at a price that makes sense.</p>
+      <div class="why-grid">
+        <div class="why-item reveal">
+          <svg class="why-icon" viewBox="0 0 40 40" aria-hidden="true"><path d="M20 4c6 8 12 15 12 22a12 12 0 0 1-24 0c0-7 6-14 12-22z" stroke="currentColor" stroke-width="1.3" fill="none"/></svg>
+          <h3>Premium Quality</h3>
+          <p>Long-lasting oils blended for scents that hold up all day.</p>
+        </div>
+        <div class="why-item reveal">
+          <svg class="why-icon" viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="16" stroke="currentColor" stroke-width="1.3" fill="none"/><path d="M20 11v9l7 4" stroke="currentColor" stroke-width="1.3" fill="none" stroke-linecap="round"/></svg>
+          <h3>Long Lasting</h3>
+          <p>Built to stay with you from morning meetings to late nights.</p>
+        </div>
+        <div class="why-item reveal">
+          <svg class="why-icon" viewBox="0 0 40 40" aria-hidden="true"><path d="M6 20l14-14 14 14-14 14z" stroke="currentColor" stroke-width="1.3" fill="none"/><circle cx="20" cy="20" r="2.5" fill="currentColor"/></svg>
+          <h3>Affordable Elegance</h3>
+          <p>Designer-inspired notes at a price that makes sense.</p>
+        </div>
       </div>
     </div>
   </section>
@@ -197,11 +241,43 @@
 </main>
 
 <!-- FOOTER -->
+<section class="footer-cta">
+  <div class="wrap footer-cta-inner reveal">
+    <div class="footer-cta-copy">
+      <h2 class="section-title">Find Your Signature Scent Today</h2>
+      <p>Luxury scents, affordable elegance — order straight to WhatsApp.</p>
+      <a class="btn btn-primary" data-wa-text="Hi! I'm interested in M. Fragrance by Momal. Can you help me place an order?" href="#">
+        <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M17.6 6.32A8.86 8.86 0 0 0 3.06 16.9L2 21l4.2-1.1a8.86 8.86 0 0 0 4.24 1.08h.01a8.87 8.87 0 0 0 6.28-15.5zM10.46 19.4h-.01a7.36 7.36 0 0 1-3.76-1.03l-.27-.16-2.5.65.67-2.44-.18-.25a7.38 7.38 0 1 1 13.7-3.89 7.35 7.35 0 0 1-7.65 7.12zm4.04-5.53c-.22-.11-1.3-.64-1.5-.72-.2-.07-.35-.11-.5.11-.14.22-.57.72-.7.87-.13.14-.26.16-.48.05a6.1 6.1 0 0 1-3.02-2.64c-.23-.39.23-.36.65-1.2.07-.14.04-.27-.02-.38-.06-.11-.5-1.2-.68-1.65-.18-.43-.36-.37-.5-.38h-.43c-.14 0-.38.05-.58.27-.2.22-.76.74-.76 1.8s.78 2.09.89 2.23c.11.14 1.53 2.34 3.72 3.28.52.22.92.36 1.24.46.52.16 1 .14 1.37.09.42-.06 1.3-.53 1.48-1.05.18-.51.18-.95.13-1.04-.05-.1-.2-.16-.42-.27z"/></svg>
+        Order on WhatsApp
+      </a>
+    </div>
+    <div class="footer-cta-thumbs">
+      <a href="#scent-red" class="footer-cta-thumb" style="--accent:#a11d2e"><img src="assets/products/red.png" alt="Red Passion" loading="lazy" onerror="this.style.display='none'"></a>
+      <a href="#scent-white" class="footer-cta-thumb" style="--accent:#efe9d8"><img src="assets/products/white.png" alt="Aura D'Or" loading="lazy" onerror="this.style.display='none'"></a>
+      <a href="#scent-blue" class="footer-cta-thumb" style="--accent:#16294f"><img src="assets/products/blue.png" alt="Noir Essence" loading="lazy" onerror="this.style.display='none'"></a>
+      <a href="#scent-pink" class="footer-cta-thumb" style="--accent:#c94f7c"><img src="assets/products/pink.png" alt="Blush Serenity" loading="lazy" onerror="this.style.display='none'"></a>
+    </div>
+  </div>
+</section>
+
 <footer class="site-footer">
-  <div class="wrap footer-inner">
-    <a class="wordmark footer-wordmark" href="#top">M<span class="dot">.</span> Fragrance</a>
-    <p class="footer-tagline">Smell Premium. Feel Confident.</p>
-    <div class="footer-links">
+  <div class="wrap footer-grid">
+    <div class="footer-col footer-brand">
+      <a class="wordmark footer-wordmark" href="#top">M<span class="dot">.</span> Fragrance</a>
+      <p class="footer-tagline">Smell Premium. Feel Confident.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Shop</h4>
+      <a href="#collection">Collection</a>
+      <a href="#gift-box">Gift Box</a>
+    </div>
+    <div class="footer-col">
+      <h4>Info</h4>
+      <a href="#story">Our Story</a>
+      <a href="#top">Back to Top</a>
+    </div>
+    <div class="footer-col">
+      <h4>Connect</h4>
       <a data-wa-text="Hi! I'm interested in M. Fragrance by Momal. Can you help me place an order?" href="#">
         <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M17.6 6.32A8.86 8.86 0 0 0 3.06 16.9L2 21l4.2-1.1a8.86 8.86 0 0 0 4.24 1.08h.01a8.87 8.87 0 0 0 6.28-15.5zM10.46 19.4h-.01a7.36 7.36 0 0 1-3.76-1.03l-.27-.16-2.5.65.67-2.44-.18-.25a7.38 7.38 0 1 1 13.7-3.89 7.35 7.35 0 0 1-7.65 7.12zm4.04-5.53c-.22-.11-1.3-.64-1.5-.72-.2-.07-.35-.11-.5.11-.14.22-.57.72-.7.87-.13.14-.26.16-.48.05a6.1 6.1 0 0 1-3.02-2.64c-.23-.39.23-.36.65-1.2.07-.14.04-.27-.02-.38-.06-.11-.5-1.2-.68-1.65-.18-.43-.36-.37-.5-.38h-.43c-.14 0-.38.05-.58.27-.2.22-.76.74-.76 1.8s.78 2.09.89 2.23c.11.14 1.53 2.34 3.72 3.28.52.22.92.36 1.24.46.52.16 1 .14 1.37.09.42-.06 1.3-.53 1.48-1.05.18-.51.18-.95.13-1.04-.05-.1-.2-.16-.42-.27z"/></svg>
         WhatsApp
@@ -211,6 +287,8 @@
         Facebook
       </a>
     </div>
+  </div>
+  <div class="wrap footer-bottom">
     <p class="footer-copy">&copy; 2026 M. Fragrance by Momal. All rights reserved.</p>
   </div>
 </footer>
